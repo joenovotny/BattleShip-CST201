@@ -116,61 +116,6 @@
                     // If miss, return to player's turn
                     enemyGetsAnotherTurn = enemyHit;
                 }
-                /*Console.WriteLine("\nYour turn to fire!");
-                int targetRow, targetCol;
-
-                while (true)
-                {
-                    Console.Write("Enter row (0-9): ");
-                    if (!int.TryParse(Console.ReadLine(), out targetRow) || targetRow < 0 || targetRow > 9)
-                        continue;
-
-                    Console.Write("Enter column (0-9): ");
-                    if (!int.TryParse(Console.ReadLine(), out targetCol) || targetCol < 0 || targetCol > 9)
-                        continue;
-
-                    if (enemyBoard.HasBeenShot(targetRow, targetCol))
-                    {
-                        Console.WriteLine("You've already fired at that location. Try again.");
-                        continue;
-                    }
-
-                    break;
-                }
-
-                bool playerHit = enemyBoard.ReceiveShot(targetRow, targetCol);
-                Console.WriteLine(playerHit ? "Hit!" : "Miss!");
-                Console.ReadKey();
-
-                if (enemyBoard.AllShipsSunk())
-                {
-                    Console.WriteLine("You sunk all enemy ships! You win!");
-                    break;
-                }
-
-                // --- Enemy Turn ---
-                Random rand = new Random();
-                int enemyRow, enemyCol;
-
-                do
-                {
-                    enemyRow = rand.Next(0, 10);
-                    enemyCol = rand.Next(0, 10);
-                } while (playerBoard.HasBeenShot(enemyRow, enemyCol));
-
-                bool enemyHit = playerBoard.ReceiveShot(enemyRow, enemyCol);
-                Console.WriteLine($"\nEnemy fires at ({enemyRow}, {enemyCol}) and it's a {(enemyHit ? "hit!" : "miss.")}");
-                Console.ReadKey();
-
-                if (playerBoard.AllShipsSunk())
-                {
-                    Console.WriteLine("The enemy sunk all your ships. You lose.");
-                    break;
-                }
-            }
-
-            Console.WriteLine("Game Over.");
-            }*/
             }
         }
     }
